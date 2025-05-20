@@ -1,6 +1,6 @@
 # User & File Configuration
 ssh-dir=~/.ssh/myssh1
-base=my_new
+base=secondlargest
 suff=_tb
 extra_src=
 extra_h=
@@ -35,14 +35,14 @@ $(exec_wv): $(exec)
 test: $(exec)
 	./$<
 # Run waveforms
-sim: hdl_guard $(exec_wv) test
+sim: $(exec_wv) test
 	$(cc_wv) $(exec_wv) $(cc_wv_flags)
 # Clean all test files
 clean:
-	rm -f $(exec) *.o *.$(ext-wv)
+	rm -f $(exec) *.o *.$(ext_wv)
 # ssh login
 login:
-	eval $(ssh-agent)
+	eval $$(ssh-agent)
 	ssh-add $(ssh-dir)
 #######################
 
