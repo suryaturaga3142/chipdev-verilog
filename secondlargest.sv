@@ -25,14 +25,9 @@ module model #(parameter
 
 logic [DATA_WIDTH-1:0] max, nxt_max, nxt_dout; // dout = secmax
 
-always_ff @( posedge clk, negedge resetn ) begin
-  if(!resetn) begin
-      dout <= '0;
-      max <= '0;
-  end else begin
-      dout <= nxt_dout;
-      max <= nxt_max;
-  end
+always_ff @( posedge clk ) begin
+  dout <= nxt_dout;
+  max <= nxt_max;
 end
 
 assign nxt_max  = !resetn ? '0 : din > max ? din : max;
