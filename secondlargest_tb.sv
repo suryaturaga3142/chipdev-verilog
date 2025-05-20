@@ -1,6 +1,6 @@
 `timescale 1ps/1ps
 
-// Testbench for secondlargest module.
+// Short testbench for secondlargest module.
 
 module secondlargest_tb #(
     DATA_WIDTH = 32
@@ -25,7 +25,7 @@ initial begin
     #2 din = 'h0e;
     #2 din = 'h0c;
     #2 din = 'h01;
-    $finish;
+    #2 $finish;
 end
 
 initial clk = '0;
