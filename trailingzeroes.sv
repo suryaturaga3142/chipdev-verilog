@@ -15,12 +15,12 @@ module model #(parameter
 logic [$clog2(DATA_WIDTH):0] sum;
 logic trailing;
 always @* begin
-    trailing = 1'b1;
-    sum = '0;
-    for(int i = 0; i < DATA_WIDTH; i++) begin
-        trailing = trailing & ~din[i];
-        sum = sum + trailing;
-    end
+  trailing = 1'b1;
+  sum = '0;
+  for(int i = 0; i < DATA_WIDTH; i++) begin
+    trailing = trailing & ~din[i];
+    sum = sum + trailing;
+  end
 end
 assign dout = sum;
 endmodule
