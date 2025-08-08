@@ -4,6 +4,10 @@ The following website has a very nice set of SystemVerilog questions to practice
 
 ### https://chipdev.io/question-list
 
+Here's the HDLBits website as well just for reference. You might see a couple things from there.
+
+### https://hdlbits.01xz.net/wiki/Problem_sets
+
 This repository is just my collection of solutions. I didn't _just_ want to write something that works. I focused on writing very neat and elegant solutions that use less lines of code and are easier to understand. With the right coding style and sufficient optimizations, this translates to better hardware. For example, small multipliers can be faster than large multiplexers.
 
 ### Note about the content
@@ -14,4 +18,4 @@ I should also add that none of the questions related to testbenching. It was all
 
 ### Why this website
 
-Honestly, I just saw a couple of interesting questions especially in the hard levels. They didn't look unsolvable, but they look like they could use some optimized code. I like the feeling when I simpify a complicated piece of code into something nicer.
+Honestly, I just saw a couple of interesting questions especially in the hard levels. They didn't look unsolvable, but they look like they could use some optimized code. I like the feeling when I simpify a complicated piece of code into something nicer. Not ignoring HDLBits tho, they have more testbenching which is cool.
